@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>pale-lantern</title>
+<meta name="description" content="pale-lantern は個人用のメール整理ツールです。">
+<style>
+  :root {
+    --bg: #fbfbfa;
+    --text: #1f2328;
+    --muted: #59636e;
+    --line: #d8dee4;
+    --accent: #0b6bcb;
+    --card: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #15181c;
+      --text: #e6e8eb;
+      --muted: #9aa4af;
+      --line: #30363d;
+      --accent: #6cb6ff;
+      --card: #1c2026;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
+    line-height: 1.8;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 40px 16px 64px; }
+  h1 { font-size: 1.9rem; margin: 0 0 4px; letter-spacing: 0.02em; }
+  .lead { color: var(--muted); margin: 0 0 32px; }
+  h2 { font-size: 1.15rem; margin: 36px 0 8px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+  ul { padding-left: 1.3em; }
+  li { margin: 4px 0; }
+  code { font-size: 0.92em; background: var(--card); border: 1px solid var(--line); border-radius: 4px; padding: 0 4px; }
+  a { color: var(--accent); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 16px 20px; margin: 16px 0; }
+  footer { margin-top: 48px; color: var(--muted); font-size: 0.9rem; }
+  [lang="en"] { font-size: 0.97rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>pale-lantern</h1>
+  <p class="lead">個人用のメール整理ツールです。使うのは作った本人だけで、一般には提供していません。</p>
+
+  <h2>何をするツールか</h2>
+  <ul>
+    <li>本人の Gmail から、あらかじめ決めた差出人・件名に当てはまる通知メールだけを読み取ります</li>
+    <li>読み取ったメールは、本人のパソコンの中で整理し、あとから検索できるようにします</li>
+    <li>ログインに確認コードが要る外部サイトのために、そのサイトのログイン受付アドレスへ空メールを1通送ります（返信で届く確認コードでログインします）</li>
+  </ul>
+
+  <h2>Google のデータの扱い</h2>
+  <div class="card">
+    <ul>
+      <li><strong>Gmail の読み取り</strong>（<code>gmail.readonly</code>）: 条件に当てはまる通知メールだけを検索して取り込みます</li>
+      <li><strong>Gmail の送信</strong>（<code>gmail.send</code>）: 上に書いたログイン用の空メールを送るためだけに使います</li>
+      <li>データは本人のパソコンにだけ保存し、販売・広告・第三者への提供はしません</li>
+    </ul>
+  </div>
+  <p>詳しくは <a href="privacy.html">プライバシーポリシー</a> をご覧ください。</p>
+
+  <section lang="en">
+    <h2>About (English)</h2>
+    <p>pale-lantern is a personal email organizer used only by its developer; it is not offered to the public.
+      It reads notification emails that match predefined senders and subjects from the developer's own Gmail account,
+      organizes them on the developer's own computer for later search, and sends one blank email to an external site's sign-in address
+      when that site requires a sign-in code (the code arrives as a reply).
+      Google user data is stored only on the developer's own computers and is never sold, used for advertising, or shared with third parties.
+      See the <a href="privacy.html">Privacy Policy</a>.</p>
+  </section>
+
+  <footer>最終更新 / Last updated: 2026-09-21</footer>
+</main>
+</body>
+</html>
