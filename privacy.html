@@ -69,7 +69,8 @@
 
   <h2>使い道</h2>
   <ul>
-    <li>本人に届いた通知を整理し、あとから検索したり、期限を確かめたりするためだけに使います</li>
+    <li>本人に届いた通知を整理し、あとから検索したり、期限を確かめたり、本人の質問に答えたりするためだけに使います</li>
+    <li>質問への答えを作るときは AI サービスを使います（下の「第三者への提供と、外部のサービスへの送信」）</li>
     <li>広告、販売、信用の評価には使いません。AI モデルの学習（訓練）にも使いません</li>
   </ul>
 
@@ -79,8 +80,14 @@
     <li>Google との通信は暗号化（HTTPS）されています。ログインに使う認証情報も本人のパソコンの中にだけ保存し、公開しません</li>
   </ul>
 
-  <h2>第三者への提供</h2>
-  <p>読み取ったデータを第三者に販売したり、共有したり、外部のサービスに送ったりしません。</p>
+  <h2>第三者への提供と、外部のサービスへの送信</h2>
+  <ul>
+    <li>読み取ったデータを第三者に販売したり、共有したりしません</li>
+    <li>例外は1つだけです。本人が質問したときに限り、答えを作るために、質問と、それに関係する記録の抜粋（最大8件・各数百字）を Google の AI サービス「Google Antigravity」に送ります</li>
+    <li>Google Antigravity は、やり取りをサービスや AI モデルの改善に使わない設定（データ収集をオフ）にしています</li>
+    <li>送った内容の写しを Google Antigravity のツールが本人のパソコンに残しますが、このツールが答えのたびに消します（会話の題名の一覧だけは残ります）</li>
+    <li>これ以外の外部のサービスには送りません</li>
+  </ul>
 
   <h2>Google API サービスのユーザーデータに関するポリシー</h2>
   <p>このツールが Google API から受け取った情報の利用と、ほかのアプリへの転送は、
@@ -105,9 +112,9 @@
       <li><code>gmail.readonly</code>: the tool searches the developer's own Gmail only for notification emails that match predefined senders and subjects, and for sign-in code emails from an external site, and reads their subject, body, sender, date, attachments and headers. Other messages are not imported.</li>
       <li><code>gmail.send</code>: used only to send one blank email to an external site's sign-in address when that site requires a sign-in code (the code arrives as a reply). No other emails are sent.</li>
     </ul>
-    <p><strong>Use.</strong> The data is used only to organize and search the notifications the developer receives and to check due dates. It is never used for advertising, sold, used for credit decisions, or used to train AI models.</p>
+    <p><strong>Use.</strong> The data is used only to organize and search the notifications the developer receives, to check due dates, and to answer the developer's own questions (an AI service writes the answers; see Sharing). It is never used for advertising, sold, used for credit decisions, or used to train AI models.</p>
     <p><strong>Storage and security.</strong> Data is stored only on the developer's own computers (the one that runs the tool and the one that keeps its backup), never on internet servers. Communication with Google uses HTTPS, and credentials are kept only on those computers.</p>
-    <p><strong>Sharing.</strong> The data is not sold, shared with third parties, or sent to any external service.</p>
+    <p><strong>Sharing.</strong> The data is not sold or shared with third parties. The one exception: only when the developer asks a question, the question and excerpts of related records (up to 8, a few hundred characters each) are sent to Google's AI service "Google Antigravity" to write the answer. Google Antigravity is set not to use the interactions to improve its services or AI models (data collection turned off). The copies that Google Antigravity's tool leaves on the developer's computer are deleted by this tool after each answer (only a list of conversation titles remains). The data is not sent to any other external service.</p>
     <p><strong>Limited Use.</strong> pale-lantern's use and transfer to any other app of information received from Google APIs will adhere to the
       <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
     <p><strong>Retention and deletion.</strong> Data is kept only while the developer uses it and can be deleted from the computers at any time. Access can be revoked at any time from
@@ -115,7 +122,7 @@
     <p><strong>Changes.</strong> Any change will be published on this page with an updated date.</p>
   </section>
 
-  <footer>最終更新 / Last updated: 2026-09-21</footer>
+  <footer>最終更新 / Last updated: 2026-09-22</footer>
 </main>
 </body>
 </html>
